@@ -16,9 +16,13 @@ test('testing input value',
 
     const plusBtn = screen.getByTestId('plusBtn');
 
-    // second way to find the button
+    // second way to find the button - role
       const plusBtn2 = screen.getByRole('button');
       expect(plusBtn2).toBeInTheDocument();
+
+    // third way to find the button - text
+    const plusBtn3 = screen.getByText('plus');
+    expect(plusBtn3).toBeInTheDocument();
 
     fireEvent.click(plusBtn);
 
