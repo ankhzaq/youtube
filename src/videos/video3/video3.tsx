@@ -17,7 +17,7 @@ const Video3 = () => {
   return (
     <div>
       <input data-testid="inputValue" value={value} />
-      <button data-testid="plusBtn" onClick={() => setValue(value + 1)}>plus</button>
+      <button className="plusBtn" data-testid="plusBtn" onClick={() => setValue(value + 1)}>plus</button>
       {showChangedMessage && (
         <div data-testid="changedMessage">Value has changed</div>
       )}

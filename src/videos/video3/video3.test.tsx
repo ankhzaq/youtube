@@ -7,7 +7,7 @@ import Video3 from './video3'
 test('testing input value',
   async () => {
 
-    render(<Video3/>)
+    const { container } = render(<Video3/>)
 
     let inputValue = screen.getByTestId('inputValue');
 
@@ -24,6 +24,11 @@ test('testing input value',
     const plusBtn3 = screen.getByText('plus');
     expect(plusBtn3).toBeInTheDocument();
 
+    // fourth way to find the button - text
+    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+    const plusBtns = container.getElementsByClassName('plusBtn');
+
+    expect(plusBtns.length).toEqual(1);
     fireEvent.click(plusBtn);
 
     inputValue = screen.getByTestId('inputValue');
@@ -34,4 +39,4 @@ test('testing input value',
     // @ts-ignore
     const changedMessage = await screen.getByTestId('changedMessage')
     expect(changedMessage).toBeInTheDocument();
-  })
+  });
