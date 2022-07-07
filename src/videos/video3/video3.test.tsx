@@ -24,11 +24,16 @@ test('testing input value',
     const plusBtn3 = screen.getByText('plus');
     expect(plusBtn3).toBeInTheDocument();
 
-    // fourth way to find the button - text
+    // fourth way to find the button - className
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const plusBtns = container.getElementsByClassName('plusBtn');
+    const plusBtns3 = container.getElementsByClassName('plusBtn');
+      expect(plusBtns3.length).toEqual(1);
 
-    expect(plusBtns.length).toEqual(1);
+    // fifth way to find the button
+    const plusBtn4 = screen.getByText((content, element: any) => element.tagName.toLowerCase() === 'button');
+    expect(plusBtn4).toBeInTheDocument();
+
+
     fireEvent.click(plusBtn);
 
     inputValue = screen.getByTestId('inputValue');
