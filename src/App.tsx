@@ -16,19 +16,19 @@ function getVideoById(id: number) {
 }
 
 function App() {
-  const [video, setVideo] = useState(null);
+  const [video, setVideo] = useState(<Video4 />);
   const videos = [
     {id: 0, title: 'React question interview 1'},
     {id: 1, title: 'useMemo & useCallback'},
     {id: 2, title: 'Testing input'},
-    {id: 3, title: 'Iframe'},
+    {id: 3, title: 'timeout call'},
   ];
 
   return (
     <>
       { videos.map((video) => (
         // @ts-ignore
-        <Button onClick={() => setVideo(getVideoById(video.id))}>{video.title}</Button>
+        <Button key={video.id} onClick={() => setVideo(getVideoById(video.id))}>{video.title}</Button>
       ))}
       {video}
     </>
