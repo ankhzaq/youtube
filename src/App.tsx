@@ -18,7 +18,7 @@ function getVideoById(id: number) {
 }
 
 function App() {
-  const [video, setVideo] = useState(<Video5 />);
+  const [video, setVideo] = useState(<Video4 />);
   const videos = [
     {id: 0, title: 'React question interview 1'},
     {id: 1, title: 'useMemo & useCallback'},

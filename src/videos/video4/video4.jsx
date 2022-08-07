@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchWithTimeout } from '../../utilities/utils';
 import { createServer } from "miragejs";
 
@@ -8,7 +8,7 @@ server.get("/items", () => {
 })
 
 const Video4 = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("loading...");
 
   useEffect(() => {
     const fetchData = async () => {
