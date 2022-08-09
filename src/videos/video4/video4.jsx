@@ -14,9 +14,9 @@ const Video4 = () => {
     const fetchData = async () => {
       try {
         const response = await fetchWithTimeout('/items', {
-          timeout: 1000
+          timeout: 3000
         });
-        const nextData = await response.json();
+        await response.json();
         return "Call finished successfully";
 
       } catch (error) {
