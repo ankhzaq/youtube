@@ -7,16 +7,16 @@ const Video6 = () => {
   useEffect(() => {
     setTimeout(() => {
       alert(`current counter: ${counter} - counter ref: ${refCounter.current}`);
-    }, 5000);
+    }, 3000);
   }, []);
 
   const addCounter = () => {
     const nextCounter = counter + 1;
-    refCounter.current = nextCounter;
     setCounter(nextCounter);
   }
 
   useEffect(() => {
+    refCounter.current = counter;
     setTimeout(() => {
       addCounter();
     }, 1000);

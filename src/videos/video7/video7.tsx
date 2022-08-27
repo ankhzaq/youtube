@@ -1,18 +1,14 @@
-/*
-* It will help you render markups in ways that the React JSX element will prohibit by default.
-* It will help you pass HTML directly into a component within JSX
-* */
-
 import React from 'react';
+import Text from '../../components/Text/Text';
 
 const Video7 = () => {
-  const label1 = "This is a simple sentence";
-  const label2 = "<strong>This</strong> is a <br/> simple sentence"
+  const label1 = 'This is a simple sentence';
+  const label2 = '<strong>This</strong> is a <br/> simple sentence'
   return (
     <>
-      <div>{label1}</div>
+      <Text text={label1} />
       <br />
-      <div dangerouslySetInnerHTML={{ __html: label2 }}></div>
+      <Text dangerousText={label2} />
     </>
   );
 }
