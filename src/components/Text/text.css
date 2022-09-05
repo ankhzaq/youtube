@@ -1,0 +1,33 @@
+.dangerousContainer h1 {
+  color: purple;
+}
+.dangerousContainer h2 {
+  color: orange;
+}
+.dangerousContainer h3 {
+  color: pink;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.title-1 {
+  color: purple;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.title-2 {
+  color: orange;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.title-3 {
+  color: pink;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=text.css.map */

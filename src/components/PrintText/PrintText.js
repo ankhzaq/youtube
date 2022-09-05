@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const PrintText = (props) => {
-
-  const {
-    text
-  } = props;
+const PrintText = ({ text }) => {
 
   const [indexTextPrinted, setIndexTextPrinted] = useState(0);
 
