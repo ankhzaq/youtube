@@ -4,6 +4,7 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ErrorBoundary1 } from './wisdom/ErrorBoundary/ErrorBoundary1';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={createTheme({})}>
-      <App />
+      <ErrorBoundary1 />
     </ThemeProvider>
   </React.StrictMode>
 );
